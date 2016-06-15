@@ -1,0 +1,10 @@
+db:
+  image: mariadb:10.1.14
+test:
+  build: .
+  command: tox
+  volumes:
+    - .:/code
+  links:
+    - db
+    
